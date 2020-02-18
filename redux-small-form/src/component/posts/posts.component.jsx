@@ -13,6 +13,7 @@ class Posts extends Component {
       .then(res => res.json())
       .then(data => this.setState({ posts: data }));
   }
+
   render() {
     const postItems = this.state.posts.map(post => (
       <div key={post.id}>
@@ -22,8 +23,7 @@ class Posts extends Component {
     ));
     return (
       <div>
-        <h1>Posts</h1>
-        {postItems}
+        <h1>{postItems}</h1>
       </div>
     );
   }
